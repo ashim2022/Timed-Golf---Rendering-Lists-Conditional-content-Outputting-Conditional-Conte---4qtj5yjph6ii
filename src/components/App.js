@@ -75,7 +75,7 @@ class Timer extends React.Component {
           x: this.state.x + 1,
           y: this.state.y + 1,
         });
-      }, 10);
+      }, 1000);
     }
     if (this.state.x === 250 && this.state.y === 250) {
       clearInterval(timeInterval);
