@@ -20,7 +20,6 @@ class Timer extends React.Component {
   // }
 
   handleListener(event) {
-    console.log("handleListener");
     switch (event.keyCode) {
       case 39:
         this.setState({ x: this.state.x + 5 });
@@ -56,14 +55,12 @@ class Timer extends React.Component {
   // }
 
   interval() {
-    console.log("interval");
     if (this.state.x === 250 && this.state.y === 250) {
       // this.clearTimer();
       clearInterval(timeInterval);
       return;
     }
     if (this.state.time === 0) {
-      console.log("interval if");
       timeInterval = setInterval(() => {
         if (this.state.x === 250 && this.state.y === 250) {
           clearInterval(timeInterval);
